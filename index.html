@@ -21,11 +21,11 @@
 <body>
   <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
     <a-assets>
-      <a-asset-item id="Shiro" src="Shiro-kagayaki3.glb"></a-asset-item>
+      <a-asset-item id="Shiro" src="Shiro-kagayaki4-dappi.glb"></a-asset-item>
     </a-assets>
     <a-marker type='pattern' url='./pattern-aa.patt'>
       
-    <a-entity gltf-model="#Shiro" animation-mixer></a-entity>
+    <a-entity gltf-model="#Shiro" rotation="0 0 135" position="0 0 0" scale="0.5 0.5 0.5" animation-mixer="clip:*" ></a-entity>
        
     </a-marker>
 
