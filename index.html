@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>AR DEMO</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, shrink-to-fit=no" />
-  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/3.3.1/aframe/build/aframe-ar-nft.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-  <style>
-    * {
-      margin: 0; padding: 0;
-    }
-
-    body {
-      overflow: hidden;
-      cursor: none;
-    }
-  </style>
-</head>
-<body>
-  <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
-    <a-assets>
-      <a-asset-item id="Shiro" src="Shiro-kagayaki1.glb"></a-asset-item>
-    </a-assets>
-    <a-marker type='pattern' url='./pattern-aa.patt'>
-      
-    <a-entity gltf-model="#Shiro" rotation="45 -135 45" position="0 -1 0" scale="0.1 0.1 0.1" animation-mixer="clip:*" ></a-entity>
-       
-    </a-marker>
-
-    <a-entity camera></a-entity>
-  </a-scene>
-</body>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>model-viewer demo</title>    
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </head>
+  <body>
+    <model-viewer bounds="tight" src="Shiro-only.glb"
+                  ar ar-modes="webxr scene-viewer quick-look"
+                  camera-controls environment-image="neutral"
+                  poster="poster.webp"
+                  shadow-intensity="1" autoplay>
+            
+      <button id="custom-ar-button" slot="ar-button">Start AR</button>
+    </model-viewer>
+    
+    <style>
+      #custom-ar-button {
+        font-size: 24px;
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+      }
+    </style>
+    
+    <style>
+      model-viewer {
+        width: 100%;
+        height: 640px;
+        background-color: greenyellow;
+      }
+    </style>
+    
+  </body>
 </html>
+
+
+
