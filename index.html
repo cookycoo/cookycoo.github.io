@@ -10,17 +10,19 @@
                   ar ar-modes="webxr scene-viewer quick-look"
                   camera-controls environment-image="neutral"
                   poster="poster.webp"
-                  shadow-intensity="1" autoplay>
+                  shadow-intensity="1" autoplay
+                  camera-target = "1.0m 1.0m 1.0m"
+                  >
             
       <button id="custom-ar-button" slot="ar-button">Start AR</button>
     </model-viewer>
     
     <style>
       #custom-ar-button {
-        font-size: 24px;
+        font-size: 32px;
         position: absolute;
-        bottom: 16px;
-        left: 16px;
+        bottom: 24px;
+        left: 24px;
       }
     </style>
     
